@@ -1,0 +1,17 @@
+{
+  "name": "botprueba",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "runtest"
+  },
+  "author": "Alejandro Zambrano Taus",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "cors": "^2.8.5",
+    "discord.js": "^12.4.1",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
