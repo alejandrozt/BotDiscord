@@ -1,5 +1,7 @@
 console.log("holis");
 
+require("dotenv").config();
+
 const axios = require('axios').default;
 const XMLHttpRequestVar = require("xmlhttprequest").XMLHttpRequest;
 
@@ -84,21 +86,6 @@ client.on('message', msg => {
             } else {
                 respuesta = "\n Sos " + msg.author.username + "#" + msg.author.discriminator + " 🚹";
             }
-        }
-        // PRUEBA
-
-        const funcPrueba = async () => {
-            var valor = await axios.get('https://es.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvsection=0&titles=' + 'Pokémon')
-            .then(res => res.data)
-            .catch(err => err)
-            return valor
-        }
-
-        if (mensaje.startsWith('$prueba')) {
-            funcPrueba()
-            .then(res => {
-                console.log(res)
-            })
         }
         
         // BUSQUEDA WIKIPEDIA
@@ -238,4 +225,4 @@ client.on('message', msg => {
     }
 });
 
-client.login('Nzc1NTM2ODkxNTI5MDAzMDgx.X6nxAw.kucU1QkY6mNZ-7n4fZra-M6HpWE');
+client.login(process.env.BOTTOKEN);
